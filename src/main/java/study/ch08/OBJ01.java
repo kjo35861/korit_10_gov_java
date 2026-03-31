@@ -36,5 +36,23 @@ public class OBJ01 {
         학생2.나이 = 34;
 
 
+        /**
+         * 객체(Object)
+         * class 기반 instance
+         *
+         *
+         * field / method
+         * field = 객체의 데이터를 저장하는 변수 - 클래스 내부에 선언
+         *
+         * method = 객체의 행동을 정의하는 함수 - 클래스 내부에 선언
+         * 리턴타입 메서드명 (매개변수) { 실행문; }
+         *
+         *
+         * void vs 리턴타입
+         * void - 리턴x
+         *
+         * 리턴타입 - 결과 반환 (int, String ...)
+         *
+         */
     }
 }
