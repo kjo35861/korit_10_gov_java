@@ -5,6 +5,9 @@ public class OBJ02 {
         class Addition {
             int defaultNumber = 10;
 
+            // 1. 중복 코드 제거
+            // 2. 기능별로 코드를 나눌 때
+
             int add (int a, int b) {
                 System.out.println("변수 a : " + a);
                 System.out.println("변수 b : " + b);
@@ -16,7 +19,9 @@ public class OBJ02 {
         Addition add1 = new Addition();
         int num = 1000;
         int num2 = add1.add(100,200);
-        System.out.println(num + num2);
+        int num3 = add1.add(400,500);
+        System.out.println(num + num2 + num3);
+
 
     }
 }
