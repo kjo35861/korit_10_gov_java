@@ -3,12 +3,6 @@ package study.ch08;
 public class OBJ01 {
     public static void main(String[] args) {
 
-        /**
-         * 100명의 학생정보 저장하세요.
-         * 이름, 나이
-         */
-
-
         class 학생 {
             String 이름;
             int 나이;
