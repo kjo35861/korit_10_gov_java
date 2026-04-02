@@ -28,6 +28,7 @@ public class Array09 {
 
         // 선형 탐색
 
+
         String searchName = "김준이";
         Student foundStudent = null;
         for (int i =0; i < students.length; i++) {
