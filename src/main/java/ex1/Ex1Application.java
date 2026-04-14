@@ -51,8 +51,8 @@ public class Ex1Application {
 //        while (flag) {
 //            MainView.getInstance().run();
 //            System.out.print("입력: ");
-////            List<Integer> ints = InputUtil.nextInts();
-////            int cmd = ints.get(0);
+//            List<Integer> ints = InputUtil.nextInts();
+//            int cmd = ints.get(0);
 //            int cmd = InputUtil.nextInt();
 //
 //            if (cmd == 1) {
