@@ -5,9 +5,12 @@ import ex2.controller.Controller;
 import ex2.dto.ResponseDto;
 import ex2.util.Input;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class HomeView implements View {
+
+    @Override
     public void render() {
         homeMenu();
         String cmd = Input.nextLine();
@@ -21,23 +24,29 @@ public class HomeView implements View {
             return;
         }
     }
+
     private void homeMenu() {
-        System.out.println("======<<HOME>>======");
-        System.out.println("1. 계좌생성");
-        System.out.println("2. 입금");
-        System.out.println("3. 출금");
-        System.out.println("4. 계좌조회");
-        System.out.println("5. 전체목록");
-        System.out.println("6. 거래내역");
-        System.out.println("q. 종료");
-        System.out.println("====================");
-        System.out.println();
+        Map<String, String> props = new HashMap<>();
+        props.put("title", "HOME MENU");
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("1. 계좌 생성\n");
+        stringBuilder.append("2. 은행 서비스\n");
+        stringBuilder.append("q. 프로그램 종료\n");
+        props.put("body", stringBuilder.toString());
+        basiclayout(props);
     }
 
     private void homeError(String message) {
-        System.out.println("======<< HOME ERROR >>======");
-        System.out.println("오류 내용 [ " + message + " ]");
-        System.out.println("============================");
-        System.out.println();
+        Map<String, String> props = new HashMap<>();
+        props.put("title", " ERROR ");
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("오류 메세지 : ");
+        stringBuilder.append(message);
+        stringBuilder.append("\n");
+        props.put("body", stringBuilder.toString());
+        basiclayout(props);
+        Input.nextWait();
     }
+
+
 }

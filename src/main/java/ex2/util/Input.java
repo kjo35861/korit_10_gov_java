@@ -7,13 +7,23 @@ import java.io.InputStreamReader;
 public class Input {
 
     public static String nextLine() {
-        System.out.print("입력 : ");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            String line = bufferedReader.readLine();
-            return line;
+            System.out.print("입력 : ");
+            return bufferedReader.readLine();
         } catch (IOException e) {
             return null;
         }
     }
+
+        public static void nextWait() {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            try {
+                System.out.print("계속 하시려면 아무키나 입력하세요...");
+                bufferedReader.readLine();
+            } catch (IOException e) {
+
+            }
+
+        }
     }
