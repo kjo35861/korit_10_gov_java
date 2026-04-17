@@ -11,7 +11,7 @@ public class Table {
     private List<String> columns;
     private List<List<String>> rows;
 
-    public Table(List<String> columns, List<List<String>> rows) {
+    public Table(List<String> columns, List<List<Object>> rows) {
         this.columns = columns.stream()
                 .map(col -> Objects.toString(col))
                 .toList();
@@ -19,7 +19,7 @@ public class Table {
         this.rows = rows.stream()
                 .map(
                         row -> row.stream()
-                                .map(field -> Object.toString(field))
+                                .map(field -> Objects.toString(field))
                                 .toList())
                 .toList();
     }
@@ -69,6 +69,7 @@ public class Table {
     public String createField(String name, int maxWideth) {
         int blankSize = ((maxWideth - name.length()) /2) +2;
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\t");
 
         for (int i = 0; i < blankSize; i++) {
             stringBuilder.append(" ");
@@ -78,6 +79,8 @@ public class Table {
         for (int i = 0; i < blankSize; i++) {
             stringBuilder.append(" ");
         }
+
+        stringBuilder.append("\t");
         return stringBuilder.toString();
     }
 
